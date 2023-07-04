@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<title>Clock</title>
+<style>
+.rio-1{
+   height:90vh;
+   font-size:25px;
+   font-weight:bold;
+      }
+	  
+.color{
+	  border-radius:15px;	
+      background-color:black;
+	  border-color:light;
+	  box-shadow:inset 12px 12px 2px limegreen,inset -12px -12px 2px limegreen;
+	  color:white;
+	  position:relative;
+	  overflow:hidden;
+	  z-index:9;
+	}	  
+	.color::before{
+		content:"";
+		position:absolute;
+		height:50vh;
+		width:100%;
+		border:10px solid limegreen;
+		transform:rotate(47deg);
+		left:-90%;
+		z-index:-1;
+		bottom:-13%;
+		}
+		.color::after{
+		content:"";
+		position:absolute;
+		height:50vh;
+		width:100%;
+		border:10px solid limegreen;
+		transform:rotate(47deg);
+		top:%;
+		right:-90%;
+		bottom:12%;
+		z-index:-1;
+		}
+	.row{
+		--bs-gutter-x: 0!important;
+    bs-gutter-y: 0!important;
+	}
+    </style>
+</head>
+<body class="bg-dark">
+<section class="d-flex align-items-center justify-content-center rio-1">
+
+	<div class="row">
+	
+			<div class="col-12  p-5 color">
+			<div class="row align-items-center justify-content-center">
+			<div class="col-3 text-center">
+			<div id="hours"> </div>
+			<h3>Hrs</h3>
+			</div>
+			<div class="col-3 text-center">
+			<div id="minutes"> </div>
+			<h3>Min</h3>
+			</div>
+			<div class="col-3 text-center">
+			<div id="seconds"> </div>
+			<h3>Sec</h3>
+			</div>
+			<div class="text-end">
+			<div id="am">
+			    
+			</div>
+			</div>
+					
+		<div class="row justify-content-center align-items-center"style="">
+		<div class="col-3 text-center">		<div id="date">		</div>
+		
+		<h3>Date</h3>	
+		</div>
+	
+	<div class="col-3 text-center">		<div id="months"> 		</div>
+		<h3>Mth</h3>
+		</div>
+		
+		<div class="col-3 text-center">		<div id="years"> </div>
+				<h3>yrs</h3>
+		</div>
+		
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+			
+<script src="rio.js"></script>
+</body>
+</html>
